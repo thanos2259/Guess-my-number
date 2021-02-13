@@ -4,12 +4,10 @@ let score = 20;
 let highscore = 0;
 
 //check button clicked
-var input = document.querySelector('.guess');
-input.addEventListener('keypress', function (event) {
+document.querySelector('.guess').addEventListener('keypress', function (event) {
   if (event.keyCode === 13) {
     event.preventDefault();
     document.querySelector('.check').click();
-    console.log('paparas');
   }
 });
 document.querySelector('.check').addEventListener('click', function () {
