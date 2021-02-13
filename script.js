@@ -2,11 +2,19 @@
 let number = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
-console.log(number);
 
 //check button clicked
+var input = document.querySelector('.guess');
+input.addEventListener('keypress', function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.querySelector('.check').click();
+    console.log('paparas');
+  }
+});
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
+
   if (!guess) {
     document.querySelector('.message').textContent = '⛔ No number';
   } else if (guess === number) {
