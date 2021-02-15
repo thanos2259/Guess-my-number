@@ -14,7 +14,7 @@ function myScore(score) {
 
 //check button clicked
 document.querySelector('.guess').addEventListener('keydown', function (event) {
-  if (event.keyCode === 13) {
+  if (event.key === 'Enter') {
     event.preventDefault();
     document.querySelector('.check').click();
   }
